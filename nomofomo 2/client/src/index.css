@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Gemstones&family=Teko:wght@400;700&display=swap");
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply font-mono bg-gray-50;
+  }
+}
+
+@layer base {
+  .btn {
+    @apply bg-white border border-primary-500 hover:border-green-500 font-bold py-2 px-4 rounded text-lg transition-all duration-200 ease-in-out;
+  }
+}
+
+.title {
+  font-family: "Rubik Gemstones", cursive;
+}
+.teko {
+  font-family: "Teko", sans-serif;
+}
+
+.text-animation {
+  background-image: linear-gradient(
+    to right,
+    #a78bfa,
+    #f87171,
+    #22c55e,
+    #a78bfa
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  background-position: -100%;
+  animation: animatedText 2s infinite alternate-reverse;
+}
+
+@keyframes animatedText {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
+.react-responsive-modal-overlay,
+.react-responsive-modal-container,
+.react-responsive-modal-modal {
+  animation-fill-mode: forwards !important;
+}
+
+.customModal {
+  border-radius: 8px;
+}
